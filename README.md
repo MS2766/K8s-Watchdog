@@ -106,6 +106,22 @@ Train the Random Forest model using the generated data and create a model:
 python src/model_train_and_accuracy.py
 ```
 
+## Project directory structure -
+K8s-Watchdog/
+├── src/                              # Code files (data generation, training, etc.)
+│   ├── normal_load.yaml                # Simulate a light load
+│   ├── resource_exhaustion.yaml        # Simulate a heavy load
+│   ├── crash_pod.yaml                  # Cause a pod crash
+│   ├── deny_network.yaml               # Cause a network denial
+│   ├── scrape_metrics.py               # Scrape the cluster metrics from Prometheus
+│   └── model_train_and_accuracy.py     # Your Random Forest training and accuracy measurement script
+├── data/                             # Dataset
+│   └── k8s_with_anomalies.csv          # Generated Kubernetes data
+├── models/                           # Trained model artifacts
+│   └── k8s-watchdog.pkl
+├── presentation/                     # Slides & demo (to be added later)
+└── README.md                         # Repository description file
+
 ## Tech Stack
 - **Frontend:** React, React Router, CSS
 - **Backend:** FastAPI, PyTorch, Pillow, torchvision
