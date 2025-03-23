@@ -77,9 +77,16 @@ Deploy Prometheus to collect real-time metrics from the cluster, replicating how
       kubectl get pods -n monitoring
       ```
 
-### ✅ Simulate Realistic Data
-High-performance API for handling AI tasks.
-
+### ✅ Simulate Realistic Data -
+  Purpose: Generate data with normal operations and anomalies (pod failures, resource exhaustion, network issues) to reflect real-world Kubernetes behavior.
+Instructions
+Setup: Use PowerShell and kubectl to deploy workloads.
+Realism: Multi-pod app for normal load, varied anomalies for production-like issues.
+1. **Normal Operation** - normal_load.yaml
+2. **Pod Failure** - crash_pod.yaml
+3. **Recource Exhaustion** - resource_exhaustion.yaml
+4. **Network Failure** - deny_network.yaml
+   Apply and delete the pods 2,3 and 4 to simulate anomalies in the pod operations
 ### ✅ React Frontend
 A responsive UI for a smooth user experience.
 
