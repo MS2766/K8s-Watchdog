@@ -107,6 +107,7 @@ python src/model_train_and_accuracy.py
 ```
 
 ## Project directory structure -
+```markdown
 K8s-Watchdog/
 ├── src/                              # Code files (data generation, training, etc.)
 │   ├── normal_load.yaml                # Simulate a light load
@@ -121,6 +122,7 @@ K8s-Watchdog/
 │   └── k8s-watchdog.pkl
 ├── presentation/                     # Slides & demo (to be added later)
 └── README.md                         # Repository description file
+```
 
 ## Tech Stack
 - **Frontend:** React, React Router, CSS
