@@ -5,25 +5,25 @@ K8s-Watchdog is a solution developed for the Guidewire DEVTrails University Hack
 
 ## Setup Steps 
 ✅ **Setup Azure Kubernetes Service(AKS)** - 
-    1. Install Azure CLI - 
+    1.Install Azure CLI - 
        -Download the installer from docs.microsoft.com.
        -Run the .msi file, follow the prompts, and restart your terminal.
        -Check the installation
        ```bash
        az --version
        ```
-    2. Login to Azure -
+    2.Login to Azure -
       ```bash
       az login
       ```
       -A browser window opens; sign in with your Azure credentials.
       -After login, PowerShell shows your subscription details.
-    3. Create a resource group -
+    3.Create a resource group -
        ```bash
        az group create --name HackathonRG --location eastus
        ```
        -This command creates a container for your AKS cluster.
-    4. Create the AKS cluster -
+    4.Create the AKS cluster -
        ```bash
        az aks create ^ --resource-group HackathonRG ^ --name HackathonAKS ^ --node-count 2 ^ --enable-addons monitoring ^ --generate-ssh-keys
        ```
@@ -31,7 +31,7 @@ K8s-Watchdog is a solution developed for the Guidewire DEVTrails University Hack
        -enable-addons monitoring: Adds Azure Monitor (optional visibility), but we’ll use Prometheus for custom metrics.
        -generate-ssh-keys: Creates SSH keys for secure access.
        Takes ~10-15 minutes. Output confirms the cluster is created.
-    5. Connect to your cluster -
+    5.Connect to your cluster -
        -Install kubectl via Azure CLI
        ```bash
        az aks install-cli
