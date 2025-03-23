@@ -102,7 +102,7 @@ Apply and delete the pods 2,3 and 4 to simulate anomalies in the pod operations
 ### ✅ Train the model -
 Train the Random Forest model using the generated data and create a model:
 ```bash
-python src/train_model.py
+python src/model_train_and_accuracy.py
 ```
 
 ## Tech Stack
@@ -111,56 +111,5 @@ python src/train_model.py
 - **Database:** PostgreSQL (if applicable)
 - **Deployment:** Docker, Kubernetes, GitHub Actions
 
-## Installation & Setup
-
-### 1️⃣ Clone the Repository
-```bash
-git clone https://github.com/your-username/AI-ArtFusionLab.git
-cd AI-ArtFusion-Lab
-```
-
-### 2️⃣ Backend Setup
-#### Install Dependencies
-```bash
-cd backend
-pip install -r requirements.txt
-```
-
-#### Run FastAPI Server
-```bash
-uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
-```
-
-### 3️⃣ Frontend Setup
-#### Install Dependencies
-```bash
-cd frontend
-npm install
-```
-
-#### Run React App
-```bash
-npm start
-```
-
 ## Usage
-- **Art Generation:** Enter a text prompt and let the AI generate an artwork.
-- **Style Transfer:** Upload a content image and a style image to create a fusion of both.
-- **Save & Share:** Download and showcase your AI-generated artwork.
-
-## API Endpoints
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `POST` | `/art-generation/` | Generates AI artwork from text |
-| `POST` | `/style-transfer/` | Transfers artistic style to an image |
-
-## Contributing
-1. **Fork** the repository.
-2. **Create a branch** (`git checkout -b feature-branch`).
-3. **Commit changes** (`git commit -m "Added new feature"`).
-4. **Push** (`git push origin feature-branch`).
-5. **Open a pull request** on GitHub.
-
----
-
-You can copy and paste this formatted README file into your repository.
+Just feed the dataset to the model and adjust the parameters based on use case
