@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-normal
+  namespace: default
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: nginx-normal
+  template:
+    metadata:
+      labels:
+        app: nginx-normal
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "9113"
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        resources:
+          limits:
+            cpu: 500m
+            memory: 512Mi
+          requests:
+            cpu: 100m
+            memory: 128Mi
+      - name: nginx-exporter
+        image: nginx/nginx-prometheus-exporter:latest
+        args: ["-nginx.scrape-uri=http://localhost:80/stub_status"]
+        ports:
+        - containerPort: 9113
