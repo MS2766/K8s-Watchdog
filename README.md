@@ -1,7 +1,3 @@
-Here is a formatted version of your README file:
-
----
-
 # K8s-Watchdog - ML model to predict failures in a K8s cluster
 
 ## Overview
