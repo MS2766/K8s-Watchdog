@@ -82,6 +82,7 @@ Realism: Multi-pod app for normal load, varied anomalies for production-like iss
 2. **Pod Failure** - crash_pod.yaml
 3. **Recource Exhaustion** - resource_exhaustion.yaml
 4. **Network Failure** - deny_network.yaml
+
 Apply and delete the pods 2,3 and 4 to simulate anomalies in the pod operations
 
 ### ✅ Collect Metrics with Prometheus -
