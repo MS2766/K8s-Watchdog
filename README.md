@@ -99,8 +99,11 @@ Apply and delete the pods 2,3 and 4 to simulate anomalies in the pod operations
    python export_metrics.py
    ```
 
-### ✅ Docker Support
-Easily deployable with Docker & Kubernetes.
+### ✅ Train the model -
+Train the Random Forest model using the generated data and create a model:
+```bash
+python src/train_model.py
+```
 
 ## Tech Stack
 - **Frontend:** React, React Router, CSS
