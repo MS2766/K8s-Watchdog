@@ -82,9 +82,22 @@ Realism: Multi-pod app for normal load, varied anomalies for production-like iss
 2. **Pod Failure** - crash_pod.yaml
 3. **Recource Exhaustion** - resource_exhaustion.yaml
 4. **Network Failure** - deny_network.yaml
-   Apply and delete the pods 2,3 and 4 to simulate anomalies in the pod operations
-### ✅ React Frontend
-A responsive UI for a smooth user experience.
+Apply and delete the pods 2,3 and 4 to simulate anomalies in the pod operations
+
+### ✅ Collect Metrics with Prometheus -
+1. **Access Prometheus:**
+   ```bash
+   kubectl port-forward -n monitoring svc/prometheus-server 9090:80
+   ```
+2. **Export Data with Python:**
+   ```bash
+   pip install requests pandas
+   ```
+   Use scrape_metrics.py
+   -Run :
+   ```bash
+   python export_metrics.py
+   ```
 
 ### ✅ Docker Support
 Easily deployable with Docker & Kubernetes.
