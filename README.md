@@ -124,11 +124,5 @@ K8s-Watchdog/
 └── README.md                         # Repository description file
 ```
 
-## Tech Stack
-- **Frontend:** React, React Router, CSS
-- **Backend:** FastAPI, PyTorch, Pillow, torchvision
-- **Database:** PostgreSQL (if applicable)
-- **Deployment:** Docker, Kubernetes, GitHub Actions
-
 ## Usage
 Just feed the dataset to the model and adjust the parameters based on use case
